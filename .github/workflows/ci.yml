@@ -78,7 +78,7 @@ jobs:
         run: echo "::notice::No pyproject.toml or requirements.txt yet, so the Python tests were skipped"
 
       # python-version must be explicit — setup-uv does not auto-read matrix.python (Pitfall 4)
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
         if: hashFiles('pyproject.toml', 'requirements.txt') != ''
         with:
           python-version: ${{ matrix.python }}
